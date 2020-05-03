@@ -1,0 +1,49 @@
+/* ==UserStyle==
+@name           cd.screwdriver.cd - 5/3/2020, 3:46:10 PM
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+@-moz-document domain("cd.screwdriver.cd") {
+    /* Insert code here... */
+    g.graph-node.build-success * {
+        fill: #03af7a
+    }
+
+    g.graph-node.build-started_from * {
+        fill: #03af7a
+    }
+
+    g.graph-node.build-failure * {
+        fill: #ff4b00
+    }
+
+    g.graph-node.build-aborted * {
+        fill: #ff4b00
+    }
+
+    * i.fa.fa-times-circle-o.fa-fw {
+        color: #ff4b00
+    }
+
+    * i.fa.fa-stop-circle-o.fa-fw {
+        color: #ff4b00
+    }
+
+    * path[style*="fill: rgb(22, 192. 69);"] * {
+        fill: rgb(255, 0, 0)
+    }
+
+    * path[style*="fill: rgb(22, 192, 69)"] {
+        fill: #03af7a !important
+    }
+
+    * path[style*="fill: rgb(234, 0, 0)"] {
+        fill: #ff4b00 !important
+    }
+
+    h1 {
+        color: #ff4b00
+    }
+}
