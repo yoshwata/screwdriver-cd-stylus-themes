@@ -1,0 +1,73 @@
+/* ==UserStyle==
+@name           Screwdriver.cd color blindness
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A userstyle for color blindness
+@license BSD 3-Clause
+@author         yoshwata
+==/UserStyle== */
+@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/events"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
+    /* Insert code here... */
+    g.graph-node.build-success * {
+        fill: #03af7a
+    }
+
+    g.graph-node.build-started_from * {
+        fill: #03af7a
+    }
+
+    g.graph-node.build-failure * {
+        fill: #ff4b00
+    }
+
+    g.graph-node.build-aborted * {
+        fill: #ff4b00
+    }
+
+    * i.fa.fa-times-circle-o.fa-fw {
+        color: #ff4b00
+    }
+
+    * i.fa.fa-stop-circle-o.fa-fw {
+        color: #ff4b00
+    }
+    
+    i.fa.fa-check-circle-o.fa-fw {
+        color: #03af7a
+    }
+    
+    a.last-successful {
+        background-color: #03af7a !important
+    }
+}
+@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/metrics") {
+    * path[style*="fill: rgb(22, 192, 69)"] {
+        fill: #03af7a !important
+    }
+
+    * path[style*="fill: rgb(234, 0, 0)"] {
+        fill: #ff4b00 !important
+    }
+}
+@-moz-document regexp("^https?://cd.screwdriver.cd/dashboards/[0-9]*") {
+    div.flyout {
+        background-color: #f5f8fe !important
+    }
+
+    div > div.collection-wrapper.row.row--active {
+        background-color: #fff !important
+    }
+    
+    rect.build-success {
+        fill: #03af7a !important
+    }
+    
+    rect.build-failure {
+        fill: #ff4b00 !important
+    }
+}
+@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/options") {
+    section.danger h3 {
+        background-color: #ff4b00 !important
+    }
+}
