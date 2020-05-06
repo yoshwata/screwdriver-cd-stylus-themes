@@ -6,4 +6,4 @@
 2. Install theme
   - Dark theme
     - Preview
-    - [![Install dark theme with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/yoshwata/screwdriver-cd-stylus-themes/master/screwdrivercd-color-blindness.user.css)
+    - [![Install directory with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://raw.githubusercontent.com/yoshwata/screwdriver-cd-stylus-themes/master/screwdrivercd-color-blindness.user.css)
