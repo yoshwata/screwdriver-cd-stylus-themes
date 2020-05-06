@@ -1,5 +1,5 @@
 /* ==UserStyle==
-@name           Screwdriver.cd Dark
+@name           Screwdriver.cd dark
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
 @description    A dark userstyle
@@ -78,7 +78,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/secrets"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/options"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/metrics"), regexp("^https?://cd.screwdriver.cd/user-settings[#]") {
+@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/secrets"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/options"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/metrics"), regexp("^https?://cd.screwdriver.cd/user-settings[#]*") {
     body {
         background: #000;
     }
@@ -151,7 +151,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
     
     div.pipeline-card-content {
-        background-color: #424242
+        background-color: #424242 !important
     }
     
     div[title] {
