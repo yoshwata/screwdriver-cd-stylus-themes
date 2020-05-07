@@ -5,9 +5,10 @@
 @description    A dark userstyle
 @license BSD 3-Clause
 @author         yoshwata
+@advanced       text site "Subdomain" "cd.screwdriver.cd"
 ==/UserStyle== */
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/events"),
-regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
     /* Insert code here... */
     body {
         background: #000;
@@ -78,7 +79,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/secrets"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/options"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/metrics"), regexp("^https?://cd.screwdriver.cd/user-settings[#]*") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/secrets"), regexp("^https?:///*[[site]]*//pipelines/[0-9]*/options"), regexp("^https?:///*[[site]]*//pipelines/[0-9]*/metrics"), regexp("^https?:///*[[site]]*//user-settings[#]*") {
     body {
         background: #000;
     }
@@ -137,7 +138,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/dashboards/[0-9]*"), regexp("^https?://cd.screwdriver.cd/search[a-zA-Z0-9?=]*") {
+@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*"), regexp("^https?:///*[[site]]*//search[a-zA-Z0-9?=]*") {
     body {
         background: #000;
     }
@@ -171,7 +172,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/validator") {
+@-moz-document regexp("^https?:///*[[site]]*//validator") {
     body {
         background: #000;
     }
@@ -205,7 +206,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/templates[A-Za-z0-9]*"), regexp("^https?://cd.screwdriver.cd/commands[A-Za-z0-9/]*") {
+@-moz-document regexp("^https?:///*[[site]]*//templates[A-Za-z0-9]*"), regexp("^https?:///*[[site]]*//commands[A-Za-z0-9/]*") {
     body {
         background: #000;
     }
@@ -252,7 +253,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?://cd.screwdriver.cd/templates/[A-Za-z0-9]*/[A-Za-z0-9_]*"), regexp("^https?://cd.screwdriver.cd/commands/[A-Za-z0-9]*/[A-Za-z0-9_]*") {
+@-moz-document regexp("^https?:///*[[site]]*//templates/[A-Za-z0-9]*/[A-Za-z0-9_]*"), regexp("^https?:///*[[site]]*//commands/[A-Za-z0-9]*/[A-Za-z0-9_]*") {
     body {
         background: #000;
     }
@@ -331,7 +332,7 @@ regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document domain("cd.screwdriver.cd") {
+@-moz-document domain("/*[[site]]*/") {
     ul.dropdown-menu {
         background-color: #424242
     }
