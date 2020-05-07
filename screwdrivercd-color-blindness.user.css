@@ -5,8 +5,10 @@
 @description    A userstyle for color blindness
 @license BSD 3-Clause
 @author         yoshwata
+@advanced       text site "Domain" "cd.screwdriver.cd"
 ==/UserStyle== */
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/events"), regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/pulls") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
     /* Insert code here... */
     g.graph-node.build-success * {
         fill: #03af7a
@@ -31,16 +33,24 @@
     * i.fa.fa-stop-circle-o.fa-fw {
         color: #ff4b00
     }
-    
+
     i.fa.fa-check-circle-o.fa-fw {
         color: #03af7a
     }
-    
+
+    i.fa.fa-times-circle.fa-fw {
+        color: #ff4b00
+    }
+
+    i.fa.fa-check-circle.fa-fw {
+        color: #03af7a
+    }
+
     a.last-successful {
         background-color: #03af7a !important
     }
 }
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/metrics") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/metrics") {
     * path[style*="fill: rgb(22, 192, 69)"] {
         fill: #03af7a !important
     }
@@ -48,8 +58,12 @@
     * path[style*="fill: rgb(234, 0, 0)"] {
         fill: #ff4b00 !important
     }
+
+    span.failed {
+        color: #ff4b00 !important
+    }
 }
-@-moz-document regexp("^https?://cd.screwdriver.cd/dashboards/[0-9]*") {
+@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*") {
     div.flyout {
         background-color: #f5f8fe !important
     }
@@ -57,16 +71,24 @@
     div > div.collection-wrapper.row.row--active {
         background-color: #fff !important
     }
-    
+
     rect.build-success {
         fill: #03af7a !important
     }
-    
+
     rect.build-failure {
         fill: #ff4b00 !important
     }
+
+    i.fa.fa-times-circle.build-failure {
+        color: #ff4b00
+    }
+
+    i.fa.fa-check-circle.build-success {
+        color: #03af7a
+    }
 }
-@-moz-document regexp("^https?://cd.screwdriver.cd/pipelines/[0-9]*/options") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/options") {
     section.danger h3 {
         background-color: #ff4b00 !important
     }
