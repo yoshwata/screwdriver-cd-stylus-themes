@@ -7,13 +7,28 @@
 @author         yoshwata
 @advanced       text site "Domain" "cd.screwdriver.cd"
 ==/UserStyle== */
-@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events"),
-regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
-    /* Insert code here... */
+@-moz-document domain("/*[[site]]*/") {
+    ul.dropdown-menu {
+        background-color: #424242
+    }
+
     body {
         background: #000;
     }
+}
 
+@-moz-document regexp("^https?:///*[[site]]*//login") {
+    h2 {
+        color: #FAFAFA
+    }
+
+    p {
+        color: #FAFAFA
+    }
+}
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
+    /* Insert code here... */
     div#events > div > div > div:hover {
         background: #616161 !important
     }
@@ -79,11 +94,10 @@ regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
     }
 }
 
-@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/secrets"), regexp("^https?:///*[[site]]*//pipelines/[0-9]*/options"), regexp("^https?:///*[[site]]*//pipelines/[0-9]*/metrics"), regexp("^https?:///*[[site]]*//user-settings[#]*") {
-    body {
-        background: #000;
-    }
-
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/secrets"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/options"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/metrics"),
+regexp("^https?:///*[[site]]*//user-settings[#]*") {
     div#appContainer > div.row.ember-view {
         background-color: #424242
     }
@@ -99,241 +113,246 @@ regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
     span {
         color: #fafafa
     }
-    
+
     h3 {
         color: #FAFAFA
     }
-    
+
     p {
         color: #FAFAFA
     }
-    
+
     td.name {
         color: #FAFAFA
     }
-    
+
     h4 {
         color: #FAFAFA
     }
-    
+
     label {
         color: #FAFAFA
     }
-    
+
     div.x-toggle-btn::before {
         background-color: #E0E0E0 !important
     }
-    
+
     div.chart-c3 {
         background-color: #424242
     }
-    
+
     div.chart-cta {
         background-color: #424242;
         color: #FAFAFA
     }
-    
+
     div.job-selector > select {
         background-color: #616161
     }
 }
 
-@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*"), regexp("^https?:///*[[site]]*//search[a-zA-Z0-9?=]*") {
-    body {
-        background: #000;
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/builds/.*") {
+    div.row {
+        background-color: #424242
     }
-    
+
+    h1 {
+        color: #FAFAFA
+    }
+
+    span {
+        color: #FAFAFA
+    }
+
+    a.branch {
+        color: #FAFAFA
+    }
+}
+
+@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*"),
+regexp("^https?:///*[[site]]*//search.*") {
     h2 {
         color: #FAFAFA
     }
-    
+
     p {
         color: #FAFAFA
     }
-    
+
     div.pipeline-card-content {
         background-color: #424242 !important
     }
-    
+
     div[title] {
         color: #FAFAFA
     }
-    
+
     span.badge-info {
         color: #FAFAFA
     }
-    
+
     div.flyout.row {
         background-color: #424242
     }
-    
+
     div.row--active {
         background-color: #BDBDBD !important
+    }
+
+    li.active {
+        background-color: #616161
     }
 }
 
 @-moz-document regexp("^https?:///*[[site]]*//validator") {
-    body {
-        background: #000;
-    }
-    
     h3 {
         color: #FAFAFA
     }
-    
+
     h4 {
         color: #FAFAFA
     }
-    
+
     span {
         color: #FAFAFA
     }
-    
+
     li {
         color: #FAFAFA
     }
-    
+
     div.ace_content {
         background-color: #FAFAFA
     }
-    
+
     span.label {
         color: #FAFAFA !important
     }
-    
+
     ul.dropdown-menu {
         background-color: #424242
     }
 }
 
-@-moz-document regexp("^https?:///*[[site]]*//templates[A-Za-z0-9]*"), regexp("^https?:///*[[site]]*//commands[A-Za-z0-9/]*") {
-    body {
-        background: #000;
-    }
-    
+@-moz-document regexp("^https?:///*[[site]]*//templates[/]*$"),
+regexp("^https?:///*[[site]]*//commands[/]*$"),
+regexp("^https?:///*[[site]]*//templates/[A-Za-z0-9_-]*[/]*$"),
+regexp("^https?:///*[[site]]*//templates/[A-Za-z0-9_-]*[/]*$") {
     section.row {
         background: #212121
     }
-    
+
     h4 {
         color: #FAFAFA
     }
-    
+
     div.collection-description {
         color: #FAFAFA
     }
-    
+
     b {
         color: #FAFAFA
     }
-    
+
     label {
         color: #FAFAFA
     }
-    
+
     select {
         color: #FAFAFA
     }
-    
+
     tr.lt-row {
         background: #424242 !important;
         border-color: #616161 !important;
     }
-    
+
     td.lt-cell {
         color: #FAFAFA
     }
-    
+
     div.lt-head {
         background: #757575 !important;
     }
-    
+
     th.lt-column {
         color: #FAFAFA !important
     }
 }
 
-@-moz-document regexp("^https?:///*[[site]]*//templates/[A-Za-z0-9]*/[A-Za-z0-9_]*"), regexp("^https?:///*[[site]]*//commands/[A-Za-z0-9]*/[A-Za-z0-9_]*") {
-    body {
-        background: #000;
-    }
-    
+@-moz-document regexp("^https?:///*[[site]]*//templates/.*/.*"),
+regexp("^https?:///*[[site]]*//commands/.*/.*") {
     h1 {
         color: #FAFAFA
     }
-    
+
     h2 {
         color: #FAFAFA
     }
-    
+
     h4 {
         color: #FAFAFA
     }
-    
+
     p {
         color: #FAFAFA
     }
-    
+
     div {
         color: #FAFAFA
     }
-    
+
     pre {
         background: #212121;
         color: #FAFAFA
     }
-    
+
     span {
         color: #FAFAFA !important
     }
-    
+
     div.template-description:hover {
         background: #424242
     }
-    
+
     div.images:hover {
         background: #424242
     }
-    
+
     div.annotations:hover {
         background: #424242
     }
-    
+
     div.image:hover {
         background: #424242
     }
-    
+
     div.steps:hover {
         background: #424242
     }
-    
+
     div.sourcePaths:hover {
         background: #424242
     }
-    
+
     div.secrets:hover {
         background: #424242
     }
-    
+
     div.env:hover {
         background: #424242
     }
-    
+
     div.settings:hover {
         background: #424242
     }
-    
+
     div.sd-commands:hover {
         background: #424242
     }
-    
+
     span.version {
         color: #337AB7 !important
-    }
-}
-
-@-moz-document domain("/*[[site]]*/") {
-    ul.dropdown-menu {
-        background-color: #424242
     }
 }
