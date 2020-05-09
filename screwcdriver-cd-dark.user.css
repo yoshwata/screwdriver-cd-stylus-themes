@@ -152,8 +152,26 @@ regexp("^https?:///*[[site]]*//user-settings[#]*") {
     }
 }
 
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/builds/.*") {
+    div.row {
+        background-color: #424242
+    }
+
+    h1 {
+        color: #FAFAFA
+    }
+
+    span {
+        color: #FAFAFA
+    }
+
+    a.branch {
+        color: #FAFAFA
+    }
+}
+
 @-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*"),
-regexp("^https?:///*[[site]]*//search[a-zA-Z0-9?=]*") {
+regexp("^https?:///*[[site]]*//search.*") {
     h2 {
         color: #FAFAFA
     }
@@ -180,6 +198,10 @@ regexp("^https?:///*[[site]]*//search[a-zA-Z0-9?=]*") {
 
     div.row--active {
         background-color: #BDBDBD !important
+    }
+
+    li.active {
+        background-color: #616161
     }
 }
 
