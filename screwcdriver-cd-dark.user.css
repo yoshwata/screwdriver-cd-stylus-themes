@@ -9,7 +9,11 @@
 ==/UserStyle== */
 @-moz-document domain("/*[[site]]*/") {
     ul.dropdown-menu {
-        background-color: #424242
+        background-color: #424242;
+    }
+
+    ul.dropdown-menu > li > a > span {
+        color: #E0E0E0;
     }
 
     body {
