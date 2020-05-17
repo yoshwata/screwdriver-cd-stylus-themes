@@ -170,7 +170,7 @@ regexp("^https?:///*[[site]]*//user-settings[#]*") {
     }
 }
 
-@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9]*"),
+@-moz-document regexp("^https?:///*[[site]]*//dashboards/[0-9#]*"),
 regexp("^https?:///*[[site]]*//search.*") {
     h2 {
         color: #FAFAFA
