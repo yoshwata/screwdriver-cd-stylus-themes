@@ -203,6 +203,14 @@ regexp("^https?:///*[[site]]*//search.*") {
     li.active {
         background-color: #616161
     }
+
+    td.branch {
+        color: #FAFAFA
+    }
+
+    td.account {
+        color: #FAFAFA
+    }
 }
 
 @-moz-document regexp("^https?:///*[[site]]*//validator") {
