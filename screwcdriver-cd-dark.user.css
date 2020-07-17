@@ -9,11 +9,11 @@
 ==/UserStyle== */
 @-moz-document domain("/*[[site]]*/") {
     ul.dropdown-menu {
-        background-color: #424242;
+        background-color: #E0E0E0 !important;
     }
 
     ul.dropdown-menu > li > a > span {
-        color: #E0E0E0;
+        color: #424242 !important;
     }
 
     body {
@@ -30,8 +30,8 @@
         color: #FAFAFA
     }
 }
-@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events"),
-regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls") {
+@-moz-document regexp("^https?:///*[[site]]*//pipelines/[0-9]*/events[#]?"),
+regexp("^https?:///*[[site]]*//pipelines/[0-9]*/pulls[#]?") {
     /* Insert code here... */
     div#events > div > div > div:hover {
         background: #616161 !important
